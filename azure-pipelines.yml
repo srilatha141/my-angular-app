@@ -1,4 +1,9 @@
 trigger:
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'dist'
+    ArtifactName: 'app'
+    publishLocation: 'Container'
 - main   # or your branch name
 
 pool:
