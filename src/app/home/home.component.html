@@ -1,0 +1,26 @@
+@if (!loginDisplay) {
+<div>
+    <H2 class="welcome">Welcome MSAL + Angular17 Standalone Template!</H2>
+    <p>Click Login to see List</p>
+</div>
+}
+
+@if (loginDisplay) {
+<div>
+    <p>You are authenticated User!</p>
+</div>
+ <section>
+    <form>
+      <input type="text" placeholder="Filter by city" #filter />
+      <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+    </form>
+  </section>
+  <!-- <section class="results">
+    @for (housingLocation of filteredLocationList; track housingLocation.id) {
+        <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+      } @empty {
+        Empty list of users
+      }
+  </section> -->
+
+}
