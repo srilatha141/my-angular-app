@@ -8,12 +8,12 @@ steps:
 # Step 1: Use Node.js
 - task: NodeTool@0
   inputs:
-    versionSpec: '18.x'   # Adjust based on your Angular version
+    versionSpec: '20.x'   # Adjust based on your Angular version
   displayName: 'Install Node.js'
 
 # Step 2: Install dependencies
 - script: |
-    npm ci
+    npm install
   displayName: 'Install dependencies'
 
 # Step 3: Build Angular app
